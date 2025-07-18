@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+for file in *-*; do
+    # Make sure it's a regular file (not directory, not hidden)
+    if [ -f "$file" ]; then
+        echo "${file#*-}"
+    fi
+done
