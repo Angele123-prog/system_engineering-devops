@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displays all processes in a user-friendly hierarchical format, including processes without a TTY.
+# This script prints its own Process ID (PID).
 
-ps -eo user,pid,cmd --forest
+echo "$$"
