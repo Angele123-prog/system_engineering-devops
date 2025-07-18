@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# List current directory non-hidden files, showing name after first dash
+# Display only part of filename after first dash
 
 for file in *-*; do
-    # Skip if the file starts with a dot (hidden)
-    [[ "$file" == .* ]] && continue
-    # Print only after first dash
+    # Skip if file starts with a dot (hidden file)
+    [ "${file:0:1}" = "." ] && continue
+    # Only print the part after the first dash
     echo "${file#*-}"
 done
